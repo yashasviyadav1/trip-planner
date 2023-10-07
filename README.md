@@ -1,4 +1,4 @@
-# Trip Planner
+# Safar Suhana (Trip Planner)
 This is repository for a trip planner website that is currently under construction
 
 
