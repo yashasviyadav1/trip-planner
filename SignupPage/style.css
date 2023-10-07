@@ -1,0 +1,206 @@
+body{
+    margin: 0;
+    background-color: rgb(236,238,241);
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('./assets/images/blurred-waterfall.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
+
+.create-account-heading{
+    color: rgb(209,219,218);
+    /* color: black; */
+    margin-top: 70px;
+    /* border: 1px solid black; */
+    text-align: center;
+}
+
+.outtermost-container-div{
+    /* border: 2px solid red; */
+
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inner-container-div{
+
+    background-color: white;
+    /* border: 2px solid rgb(119, 117, 117, 0.3); */
+    border-radius: 20px; 
+    height: 500px;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    /* border: 2px solid blueviolet; */
+}
+
+.signup-form-container-div{
+    /* border: 2px solid brown; */
+
+    width: 55%;
+    display: flex;
+    flex-direction: row;
+}
+
+#signup-form{
+    width: 100%;
+}
+
+
+.input-fields-div{
+    margin-top: 20px;
+    /* border: 1px solid palevioletred; */
+    height: 50px;
+    /* width: 95%; */
+    width: 100%;
+    border-radius: 25px; 
+    background-color: rgb(230,230,230);
+    /* padding-left: 15px; */
+    display: flex;
+    direction: column;
+}
+
+.first-input-fields-div{
+    /* border: 1px solid black; */
+    margin-top: 50px;
+}
+
+.input-fields{
+    /* border: 1px solid rgb(53, 21, 26); */
+
+    width: 90%;
+    border: none;
+    border-radius: 25px; 
+    background-color: transparent;
+    padding-left: 10px;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.input-fields:focus{
+    outline: none;
+}
+.input-fields::placeholder{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.input-fields-icon-divs{
+    /* border: 1px solid red; */
+    height:100%;
+    width: 15%;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+.input-fields-icons{
+    /* border: 1px solid black; */
+
+    height: 25px;
+    opacity: 78%;
+    margin-top: 12px;
+}
+
+.signup-button-div{
+    /* border: 1px solid black; */
+
+    background-color: rgb(0,119,197);
+
+}
+
+#signup-button{
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    padding: 0;
+    /* background-color: rgb(0,119,197); */
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 25px; 
+
+}
+#signup-button:hover{
+    background-color: black;
+    transition: 0.3s;
+}
+
+
+.already-have-account-div{
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* #display-div{
+    background-color: transparent;
+    border: 1px solid black;
+    text-align: center;
+} */
+
+
+/*=========================== For tabs and mobiles ==================================== */
+
+@media (max-width: 630px){
+    
+    .outtermost-container-div{
+        /* border: 2px solid red; */
+        background-color: white;
+    }
+
+    .create-account-heading{
+        /* border: 2px solid yellow; */
+        color: black;
+    }
+
+    .signup-form-container-div{
+        /* border: 2px solid blue; */
+        width: 300px;
+    }
+
+    .inner-container-div{
+        /* border: 2px solid blueviolet;   */
+        box-shadow: none;
+        width: 100%;
+    }
+
+}
+
+/* ============================== for mobile phones ===================== */
+
+@media (max-width: 390px){
+    .outtermost-container-div{
+        /* border: 2px solid red; */
+    }
+
+    .create-account-heading{
+        /* border: 2px solid yellow; */
+
+        color: black;
+    }
+
+    .signup-form-container-div{
+        /* border: 2px solid blue; */
+        width: 270px;
+    }
+
+    .inner-container-div{
+        /* border: 2px solid blueviolet;  */
+        box-shadow: none;
+        width: 100%;
+    }
+    .input-fields-icon-divs{
+        /* border: 2px solid blueviolet;  */
+    }
+    .input-fields-icons{
+        /* border: 1px solid red; */
+        height: 20px;
+
+    }
+}
