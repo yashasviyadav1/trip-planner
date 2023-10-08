@@ -1,0 +1,22 @@
+/* Trips.css */
+.trip-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .trip-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    background-color: #fff;
+  }
+  
+  .trip-box-completed {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    background-color: #e0e0e0; /* Change the background color for completed trips */
+  }
+  

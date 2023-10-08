@@ -1,17 +1,21 @@
 import React from 'react';
+import './Trips.css'; // Import the CSS file for styling
 
 const CompletedTrips = ({ completedTrips }) => {
-  return (
-    <div>
-      <h2>Completed Trips</h2>
-      <ul>
-        {completedTrips.map((trip, index) => (
-          <li key={index}>
-            <strong>{trip.destination}</strong> - {trip.date}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
+    return (
+      <div>
+        <h2>Completed Trips</h2>
+        <div className="trip-container">
+          {completedTrips.map((trip, index) => (
+            <div key={index} className="trip-box-completed">
+              <strong>{trip.destination}</strong> - {trip.date}
+              <p>Origin: {trip.origin}</p>
+              <p>Mode of Transport: {trip.transport}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
 };
+
 export default CompletedTrips;

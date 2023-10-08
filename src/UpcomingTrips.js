@@ -25,18 +25,20 @@ const UpcomingTrips = ({ trips, moveTripToCompleted }) => {
     <div>
       <h2>Upcoming Trips</h2>
       <button onClick={handleMoveToCompleted}>Move to Completed</button>
-      <ul>
+      <div className="trip-container">
         {trips.map((trip, index) => (
-          <li key={index}>
+          <div key={index} className="trip-box">
             <input
               type="checkbox"
               checked={selectedTrips.includes(trip)}
               onChange={(event) => handleCheckboxChange(event, trip)}
             />
             <strong>{trip.destination}</strong> - {trip.date}
-          </li>
+            <p>Origin: {trip.origin}</p>
+            <p>Mode of Transport: {trip.transport}</p>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
