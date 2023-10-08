@@ -1,14 +1,14 @@
-// App.js
-import './App.css';
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import NavBar from './NavBar.js';
 import TripModal from './tripmodal';
 import UpcomingTrips from './UpcomingTrips';
+import CompletedTrips from './CompletedTrips';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [trips, setTrips] = useState([]); // State to store trips
+  const [trips, setTrips] = useState([]); // State to store upcoming trips
+  const [completedTrips, setCompletedTrips] = useState([]); // State to store completed trips
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -23,27 +23,57 @@ function App() {
     setTrips([...trips, newTrip]);
   };
 
+  // Function to move selected trips to completed trips
+  const moveTripToCompleted = (selectedTrips) => {
+    // Filter out selected trips from upcoming trips
+    const updatedUpcomingTrips = trips.filter((trip) => !selectedTrips.includes(trip));
+    
+    // Add selected trips to completed trips
+    setCompletedTrips([...completedTrips, ...selectedTrips]);
+
+    // Update the upcoming trips
+    setTrips(updatedUpcomingTrips);
+  };
+
   return (
     <Router>
       <div className='App'>
         <NavBar />
         <button onClick={openModal}>Add Trip</button>
-        <Switch>
-          <Route path='/upcoming-trips'>
-            <UpcomingTrips trips={trips} /> {/* Pass trips data to UpcomingTrips */}
-          </Route>
-        </Switch>
+
+        <Routes>
+          {/* Default Page */}
+          <Route path='/' element={<Home />} />
+
+          {/* Upcoming Trips Page */}
+          <Route
+            path='/upcoming-trips'
+            element={<UpcomingTrips trips={trips} moveTripToCompleted={moveTripToCompleted} />}
+          />
+
+          {/* Completed Trips Page */}
+          <Route
+            path='/completed-trips'
+            element={<CompletedTrips completedTrips={completedTrips} />}
+          />
+        </Routes>
+
         <TripModal
           isOpen={isModalOpen}
           onRequestClose={closeModal}
           onCreateTrip={(newTrip) => {
-            addTrip(newTrip); // Add the new trip to the list
+            addTrip(newTrip);
             closeModal();
           }}
         />
       </div>
     </Router>
   );
+}
+
+// Home component for the default page
+function Home() {
+  return <h1>Welcome to the Default Page</h1>;
 }
 
 export default App;
