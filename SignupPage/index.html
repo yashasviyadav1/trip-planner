@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - SafarSuhana</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Nunito+Sans:opsz,wght@6..12,500&family=Open+Sans:wght@500&family=Pacifico&family=Poppins:wght@500&display=swap">
+    
+    <!-- stylesheet to rotate img -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  <!--this link will help a img rotate, if we apply class="fa-spin"-->
+
+</head> 
+<body>
+
+    <div class="outtermost-container-div">
+
+        <div class="heading-container-div">
+            <h2 class="create-account-heading">SIGN UP</h2>
+        </div>
+        
+        <div class="inner-container-div">
+
+            <!-- <h2 class="create-account-heading">Sign Up</h2> -->
+
+            <div class="signup-form-container-div">
+    
+                <form id="signup-form" onsubmit="signup(event)">
+
+                    <div class="input-fields-div first-input-fields-div">
+                        <div class="input-fields-icon-divs">
+                            <img class="input-fields-icons" src="./assets/images/person-icon.png" alt="person icon">
+                        </div>
+                        <input type="text" class="input-fields" id="firstname-field" placeholder="First Name"> 
+                    </div>
+
+                    <div class="input-fields-div"> 
+                        <div class="input-fields-icon-divs">
+                            <img class="input-fields-icons" src="./assets/images/person-icon.png" alt="person icon">
+                        </div>
+                        
+                        <input type="text" class="input-fields" id="lastname-field" placeholder="Last Name"> 
+                    </div>
+
+                    <div class="input-fields-div">
+                        <div class="input-fields-icon-divs">
+                            <img class="input-fields-icons" src="./assets/images/email-icon.png" alt="email icon">
+                        </div>
+
+                        <input type="text" class="input-fields" id="email-field" placeholder="Enter Email"> 
+                    </div>
+
+                    <div class="input-fields-div">
+                        <div class="input-fields-icon-divs">
+                            <img class="input-fields-icons" src="./assets/images/password-icon.png" height="20px" alt="Password icon">
+                        </div>
+                        <input type="password" class="input-fields" id="password-field" placeholder="Create Password"> 
+                    </div>
+
+                    <div class="input-fields-div signup-button-div">
+                        <button id="signup-button">CREATE ACCOUNT</button>
+                    </div>  
+                    
+                    <div class="input-fields-div already-have-account-div">
+                        <a href="../LoginPage/index.html"> Already have account? Log In </a>
+                    </div>
+                        
+                    <!-- <div class="input-fields-div" id="display-div"></div> -->
+                </form>
+    
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+<!-- important links to use the API's of Firebase-->
+<script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-app-compat.js"></script>  
+<script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-auth-compat.js"></script>
+<script src="./index.js"></script>
+</html>
+
+
+<!-- List of google fonts used :- 
+
+font-family: 'Montserrat', sans-serif;
+font-family: 'Nunito Sans', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Pacifico', cursive;
+font-family: 'Poppins', sans-serif;
+
+ -->

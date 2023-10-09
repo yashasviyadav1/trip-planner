@@ -1,0 +1,287 @@
+body{
+    margin:0;
+    padding: 0;
+    /* background-color: cadetblue; */
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: 'Montserrat', sans-serif;
+
+    background-image: url('./assets/images/blurred-waterfall-fit.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+}  
+
+/* that cadet blue part */
+.outtermost-container-div{
+    /* border: 1px solid red; */
+
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    margin:2px;
+    
+}
+
+/* white part inside the cadet blue */
+.inner-container-div{
+    background-color: white;
+    /* border: 2px solid red; */
+    height: 95%;
+    width: 70%;
+    margin: 20px;
+    border-radius: 20px; 
+    display: flex;
+}
+
+/* L E F T  half of the white part (with lock icon) */
+.image-container-div{
+    /* border: 1px solid black; */
+
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.lock-icon-img{ /*bigger one -> on the left */
+    height: 35%;
+    box-sizing: border-box;
+    margin-left: 50px;
+}
+
+/* R I G H T  half of the white part (with login fields and all) */
+.login-outter-container-div{
+    /* border: 1px solid black; */
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+/*----------------------- Input fields CSS starts---------------------- */
+
+/* inner login div container   */
+.login-inner-container-div{
+    /* border: 1px solid brown; */
+    margin-top: 100px;
+    justify-content: center;
+    width: 300px;
+    /* display: flex; */
+}
+
+/* input fields div */
+.input-fields-div{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+    height: 50px;
+    width: 100%;
+    /* border: 1px solid red; */
+    border-radius: 25px;
+    background-color: rgb(230,230,230);
+    gap: 10px;
+}
+
+.welcome-back-heading{
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.input-fields{
+    /* border: 2px solid black; */
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border:0;
+    background-color: transparent;   
+}
+
+.input-fields::placeholder{
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.input-fields:focus{
+    outline:none;
+}
+
+.input-field-icons{ /*email icon, pass icon*/
+    height: 20px;
+    margin-top: 14px;
+    margin-left: 20px ;
+}
+
+.forgot-pass-create-acc-container-div{   /* give space between input field and icons*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* -------------- Login Button and bellow anchors css and display, div-------------- */
+.login-btn{
+    color: white;
+    background-color:  rgb(87,184,70);
+    width: 100%;
+    border-radius: 25px;
+    border: 0px none;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+
+}
+.login-btn:hover{
+    background-color: black;
+    transition: 0.5s;
+}
+
+.forgot-pass-create-acc-container-div{
+    display: flex;
+    gap: 40px;
+    background-color: transparent;
+    font-size: 13px;
+}
+
+.forgot-pass-create-acc-container-div:hover{
+    color: black;
+    transition: 0.5s;
+}
+ 
+.anchors:hover{
+    color: black;
+    transition: 0.5s;
+}  
+
+#display-div{
+    margin-top: 30px;
+    text-align: center;
+    /* border: 1px solid black; */
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+/* -------footer css--------------------- */
+footer{
+    height: 25px;
+    width: 100%;
+    text-align: center;
+    background-color: #0B1C16;
+    color: rgb(255, 255, 255);
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    padding-top: 6px;
+}
+
+footer p{
+    margin:0;
+    /* border: 1px solid yellow; */
+}
+
+ /*=================== tabs and mobile phones =================== */
+
+ @media ( (min-width:901px) and (max-width: 1000px)){      /* decresing lock img (on left)'s size */
+
+    .lock-icon-img{ /*bigger one -> on the left */
+        /* border: 1px solid blue; */
+        height: 25%;
+        margin-left: 20px;
+    } 
+
+}
+
+ /*================= for smaller tabs and mobile phones =================== */
+
+@media (max-width: 900px){      /* decresing lock img (on left)'s size */
+
+    /* removing the lock img from the left so that input fields can take up all the space and also increasing the size of input fields */
+    
+    /* L E F T  half of the white part (with lock icon) */
+    .image-container-div{
+        /* border: 1px solid red; */
+        width: 0%;
+        height: 0%;
+    }
+
+    /* R I G H T  half of the white part (with login fields and all) */
+    .login-outter-container-div{
+        /* border: 1px solid black; */
+
+        width: 100%;
+        height: 100%;
+    }
+
+    /* inner login div container   */
+    .login-inner-container-div{
+        /* border: 1px solid brown; */
+
+        margin-top: 60px;
+        width: 350px;
+    }
+  
+    
+}
+
+/* ===============for mobiles only ===========================*/
+
+@media (max-width: 570px){       
+
+    /* adjusting the widths and heights of every fields acc to the size of screen */
+
+    
+    /* white part inside the cadet blue */
+    .inner-container-div{
+        background-color: rgb(255, 255, 255);
+        /* border: 2px solid red; */
+        /* width: 90%; */
+        width: 440px;
+    }
+
+    /* inner login div container   */
+    .login-inner-container-div{
+        /* border: 3px solid brown; */
+
+        margin-top: 60px;
+        width: 350px;
+    }
+}
+
+
+/*=================== for the smallest mobile screens =========================*/
+
+/* reducing size of fields by reducing width of the */
+@media (max-width: 440px){      
+
+    /* white part inside the cadet blue 'login-inner-container-div'*/
+    .inner-container-div{
+        /* border: 2px solid red; */
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        border-radius: 0px; 
+    }
+
+    /* inner login div container   */
+    .login-inner-container-div{
+        /* border: 3px solid blue; */
+        margin-top: 60px;
+        width: 300px;
+        width: 75%;
+        
+    }
+    .input-fields{
+    
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        border:0;
+        background-color: transparent;   
+        /* border: 2px solid purple; */
+
+    }
+    
+}
