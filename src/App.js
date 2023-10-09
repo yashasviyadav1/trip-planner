@@ -73,7 +73,7 @@ function App() {
 
 // Home component for the default page
 function Home() {
-  return <h1>Welcome to the Default Page</h1>;
+  return <h1>Welcome to the Page</h1>;
 }
 
 export default App;
