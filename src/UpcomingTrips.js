@@ -1,13 +1,43 @@
 import React, { useState } from 'react';
+import EditTripModal from './EditTripModal';
 
-const UpcomingTrips = ({ trips, moveTripToCompleted }) => {
+const UpcomingTrips = ({ trips,setTrips, moveTripToCompleted }) => {
   const [selectedTrips, setSelectedTrips] = useState([]);
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+  const [tripToEdit, setTripToEdit] = useState(null);
+  const handleEditClick = (trip) => {
+    setTripToEdit(trip);
+    setIsEditModalOpen(true);
+  };
 
-  // Handle checkbox change
+  const handleSaveEdit = (editedTrip) => {
+    // Create a copy of the current trips state
+    const updatedTrips = [...trips];
+    
+    // Find the index of the trip to be edited
+    const tripIndexToEdit = updatedTrips.findIndex((trip) => trip.id === editedTrip.id);
+  
+    if (tripIndexToEdit !== -1) {
+      // Update the trip in the copy with the edited data
+      updatedTrips[tripIndexToEdit] = editedTrip;
+      
+      // Use the setTrips function from props to update the state
+      setTrips(updatedTrips);
+      
+      // Close the edit modal
+      setIsEditModalOpen(false);
+    } else {
+      console.error("Trip to edit not found.");
+      setIsEditModalOpen(false);
+    }
+  };
+  
+
+  
   const handleCheckboxChange = (event, trip) => {
     const isChecked = event.target.checked;
 
-    // Add or remove the trip from the selectedTrips list
+    
     if (isChecked) {
       setSelectedTrips([...selectedTrips, trip]);
     } else {
@@ -15,10 +45,10 @@ const UpcomingTrips = ({ trips, moveTripToCompleted }) => {
     }
   };
 
-  // Move selected trips to completed
+  
   const handleMoveToCompleted = () => {
     moveTripToCompleted(selectedTrips);
-    setSelectedTrips([]); // Clear the selected trips list
+    setSelectedTrips([]); 
   };
 
   return (
@@ -36,9 +66,18 @@ const UpcomingTrips = ({ trips, moveTripToCompleted }) => {
             <strong>{trip.destination}</strong> - {trip.date}
             <p>Origin: {trip.origin}</p>
             <p>Mode of Transport: {trip.transport}</p>
+            <button onClick={() => handleEditClick(trip)}>Edit</button>
           </div>
         ))}
       </div>
+      {isEditModalOpen && (
+        <EditTripModal
+          isOpen={isEditModalOpen}
+          onRequestClose={() => setIsEditModalOpen(false)}
+          tripToEdit={tripToEdit}
+          onSaveEdit={handleSaveEdit}
+        />
+      )}
     </div>
   );
 };

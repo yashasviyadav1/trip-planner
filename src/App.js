@@ -5,6 +5,8 @@ import TripModal from './tripmodal';
 import UpcomingTrips from './UpcomingTrips';
 import CompletedTrips from './CompletedTrips';
 
+
+
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [trips, setTrips] = useState([]); // State to store upcoming trips
@@ -25,30 +27,32 @@ function App() {
 
   // Function to move selected trips to completed trips
   const moveTripToCompleted = (selectedTrips) => {
-    // Filter out selected trips from upcoming trips
+   
     const updatedUpcomingTrips = trips.filter((trip) => !selectedTrips.includes(trip));
     
-    // Add selected trips to completed trips
+    
     setCompletedTrips([...completedTrips, ...selectedTrips]);
 
-    // Update the upcoming trips
+    
     setTrips(updatedUpcomingTrips);
   };
+
 
   return (
     <Router>
       <div className='App'>
+      
         <NavBar />
         <button onClick={openModal}>Add Trip</button>
 
         <Routes>
           {/* Default Page */}
-          <Route path='/' element={<Home />} />
+          <Route path='/Home' element={<Home/>} />
 
           {/* Upcoming Trips Page */}
           <Route
-            path='/upcoming-trips'
-            element={<UpcomingTrips trips={trips} moveTripToCompleted={moveTripToCompleted} />}
+          path='/upcoming-trips'
+          element={<UpcomingTrips trips={trips} setTrips={setTrips} moveTripToCompleted={moveTripToCompleted} />}
           />
 
           {/* Completed Trips Page */}
@@ -68,6 +72,7 @@ function App() {
         />
       </div>
     </Router>
+    
   );
 }
 
