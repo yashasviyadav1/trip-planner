@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Nunito+Sans:opsz,wght@6..12,500&family=Open+Sans:wght@500&family=Pacifico&family=Poppins:wght@500&display=swap');
-
 .App {
   text-align: center;
 }
@@ -37,4 +35,26 @@
   to {
     transform: rotate(360deg);
   }
+}
+/* UpcomingTrips.css */
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  height: 100vh; /* 100% viewport height */
+}
+
+.add-trip-button {
+  background-color: rgb(18, 56, 95);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.add-trip-button:hover {
+  background-color: #0056b3;
 }

@@ -4,7 +4,9 @@
 html{
   /* border: 3px solid red; */
   height: 100vh;
-  background-image: url('https://github.com/yashasviyadav1/trip-planner/assets/124666305/05b7cbb4-33b3-4e2a-9444-3f94cf7463a4');
+  background-image: url('105.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .navbar {
     display: flex;

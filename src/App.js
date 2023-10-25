@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NavBar from './NavBar.js';
 import TripModal from './tripmodal';
 import UpcomingTrips from './UpcomingTrips';
 import CompletedTrips from './CompletedTrips';
+import './App.css';
 
 
 
@@ -44,7 +45,7 @@ function App() {
       <div className='App'>
       
         <NavBar />
-        <button onClick={openModal}>Add Trip</button>
+        <button onClick={openModal} className="add-trip-button">Add Trip</button>
 
         <Routes>
           {/* Default Page */}
