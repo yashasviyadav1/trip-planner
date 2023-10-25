@@ -36,7 +36,8 @@ function login(event){
         // Signed in successfully
         const user = userCredentials.user;
         if(user){
-            window.location.href = "https://www.youtube.com"; // replace this link with the home page of ur website 
+            // window.location.href = "https://www.youtube.com"; // replace this link with the home page of ur website 
+            window.location.href="http://localhost:3000/";
         }
     })
     
