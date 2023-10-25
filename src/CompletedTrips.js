@@ -11,6 +11,9 @@ const CompletedTrips = ({ completedTrips }) => {
               <strong>{trip.destination}</strong> - {trip.date}
               <p>Origin: {trip.origin}</p>
               <p>Mode of Transport: {trip.transport}</p>
+              <p>Expense {trip.expense}</p>
+              <p>Number of People: {trip.people}</p>
+
             </div>
           ))}
         </div>

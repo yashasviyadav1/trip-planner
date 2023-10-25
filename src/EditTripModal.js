@@ -1,4 +1,4 @@
-// EditTripModal.js
+
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 
@@ -60,6 +60,26 @@ const EditTripModal = ({ isOpen, onRequestClose, tripToEdit, onSaveEdit }) => {
             }
           />
         </label>
+        <label>
+          Expense:
+          <input
+            type="number" // Use type "number" for numeric input
+            value={editedTrip.expense}
+            onChange={(e) =>
+              setEditedTrip({ ...editedTrip, expense: parseFloat(e.target.value) })
+            }
+          />
+        </label>
+        <label>
+          People:
+          <input
+            type="number" // Use type "number" for numeric input
+            value={editedTrip.people}
+            onChange={(e) =>
+              setEditedTrip({ ...editedTrip, people: parseInt(e.target.value) })
+            }
+          />
+        </label>
         <button onClick={handleSave}>Save</button>
         <button onClick={onRequestClose}>Cancel</button>
       </form>
@@ -68,3 +88,4 @@ const EditTripModal = ({ isOpen, onRequestClose, tripToEdit, onSaveEdit }) => {
 };
 
 export default EditTripModal;
+
