@@ -112,10 +112,16 @@ const TripModal = ({ isOpen, onRequestClose, onCreateTrip }) => {
       parseInt(expense) > 0 &&
       parseInt(people) > 0
     ) {
-      onCreateTrip({ destination, origin, date, transport, expense, people });
-      onRequestClose();
-      setDestinationSuggestionSelected(false);
-      setOriginSuggestionSelected(false);
+      const currentDate = new Date();
+      const selectedDate = new Date(date);
+      if (selectedDate >= currentDate) {
+        onCreateTrip({ destination, origin, date, transport, expense, people });
+        onRequestClose();
+        setDestinationSuggestionSelected(false);
+        setOriginSuggestionSelected(false);
+      } else {
+        alert('Please select a future date.');
+      }
     } else {
       alert('Please enter a valid expense and number of people (natural positive numbers).');
     }
