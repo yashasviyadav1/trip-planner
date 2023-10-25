@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Nunito+Sans:opsz,wght@6..12,500&family=Open+Sans:wght@500&family=Pacifico&family=Poppins:wght@500&display=swap');
+
+h2{
+  font-family: 'Open Sans', sans-serif;
+}
 .suggestions-dropdown {
     list-style: none;
     padding: 0;
@@ -18,3 +23,85 @@
     background-color: #f0f0f0;
   }
   
+  .create-trip-form{
+    /* background-color: black; */
+    height: 540px;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    background-color: rgba(95, 93, 93, 0.1); ;
+
+  }
+
+  .input-field{
+    height: 28px;
+    width: 300px;
+    border-radius: 5px;
+    /* background-color: rgb(248,251,253); */
+    /* border: 1px solid blue; */
+    /* border: 2px solid rgb(155, 152, 152); */
+    border: 1px solid black;
+    box-shadow: 2px 2px 1px rgb(155, 152, 152);
+    /* box-shadow: 3px 3px 4px rgb(18,56,95); */
+    margin-bottom: 10px;
+    
+  }
+  .input-field:focus{
+    outline: none;
+    /* box-shadow: 3px 3px 6px rgb(18,56,95); */
+    /* box-shadow: 3px 3px 4px red; */
+    border:1px solid red;
+    box-shadow: 2px 2px 4px rgb(255 56 92);
+    
+    /* border: 2px solid rgb(172, 36, 36); */
+    font-family: 'Open Sans', sans-serif;
+
+  }
+
+  .create-trip-btn{
+  
+    height: 33px;
+    width: 306px;
+    background-color: rgb(18,56,95) ;
+    margin-top: 10px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    border:0;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .create-trip-btn:hover{
+    background-color: black;
+    transition: 0.5s;
+  }
+
+  .cancel-btn{
+    font-family: 'Open Sans', sans-serif;
+    height: 33px;
+    width: 306px;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: white;
+    cursor: pointer;
+  }
+  .cancel-btn:hover{
+    background-color: black;
+    transition: 0.5s;
+  }
+
+  .para-before-inputfield{
+    margin:0;
+    margin-top: 10px;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+
+  /* create trip button color: rgb(18,56,95) 
+      cancel trip button : red;
+  */

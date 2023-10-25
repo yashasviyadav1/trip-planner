@@ -1,13 +1,23 @@
 /* NavBar.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Nunito+Sans:opsz,wght@6..12,500&family=Open+Sans:wght@500&family=Pacifico&family=Poppins:wght@500&display=swap');
+
+html{
+  /* border: 3px solid red; */
+  height: 100vh;
+  background-image: url('https://github.com/yashasviyadav1/trip-planner/assets/124666305/05b7cbb4-33b3-4e2a-9444-3f94cf7463a4');
+}
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #333;
+    background-color: rgb(18, 56, 95);
     color: white;
     padding: 10px 20px;
-  }
+    font-family: 'Montserrat', sans-serif;
   
+  }
+
   .nav-left {
     flex: 1;
   }
@@ -30,6 +40,10 @@
     color: white;
   }
   
+  .navbar-links{
+    font-family: 'Montserrat', sans-serif;
+  }
+
   /* Media query for responsive design */
   @media (max-width: 768px) {
     .navbar {

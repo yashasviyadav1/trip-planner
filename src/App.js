@@ -8,6 +8,7 @@ import CompletedTrips from './CompletedTrips';
 
 
 function App() {
+  
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [trips, setTrips] = useState([]); // State to store upcoming trips
   const [completedTrips, setCompletedTrips] = useState([]); // State to store completed trips

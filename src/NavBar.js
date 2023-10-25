@@ -14,13 +14,13 @@ function NavBar() {
       <div className='nav-right'>
         <ul>
           <li>
-            <Link to='/'>Home</Link>
+            <Link className="navbar-links" to='/'>Home</Link>
           </li>
           <li>
-            <Link to='/upcoming-trips'>Upcoming Trips</Link>
+            <Link className="navbar-links" to='/upcoming-trips'>Upcoming Trips</Link>
           </li>
           <li>
-          <Link to='/completed-trips'>Completed Trips</Link>
+          <Link className="navbar-links" to='/completed-trips'>Completed Trips</Link>
           </li>
         </ul>
       </div>

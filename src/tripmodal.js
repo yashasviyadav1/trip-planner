@@ -85,16 +85,25 @@ const TripModal = ({ isOpen, onRequestClose, onCreateTrip }) => {
       onRequestClose={onRequestClose}
       contentLabel="Create Trip Modal"
     >
+
+    
       <h2>Create Trip</h2>
-      <form>
+
+      <form className="create-trip-form">
+
+      <div className="create-trip-container-div">
+      
         <label>
-          Destination:
+        <p class="para-before-inputfield">Destination:</p>  
+
           <input
+          className="input-field"
             type="text"
             value={destination}
             onChange={(e) => setDestination(e.target.value)}
-          />
-        </label>
+          /> 
+        </label> <br/>
+
         {destinationSuggestions.length > 0 && (
           <ul className="suggestions-dropdown">
             {destinationSuggestions.map((suggestion, index) => (
@@ -106,13 +115,15 @@ const TripModal = ({ isOpen, onRequestClose, onCreateTrip }) => {
         )}
 
         <label>
-          Origin:
+          <p class="para-before-inputfield">Origin:</p>   
           <input
+          className="input-field"
             type="text"
             value={origin}
             onChange={(e) => setOrigin(e.target.value)}
           />
-        </label>
+        </label> <br/>
+
         {originSuggestions.length > 0 && (
           <ul className="suggestions-dropdown">
             {originSuggestions.map((suggestion, index) => (
@@ -122,41 +133,56 @@ const TripModal = ({ isOpen, onRequestClose, onCreateTrip }) => {
             ))}
           </ul>
         )}
+        
         <label>
-          Date:
+        <p class="para-before-inputfield">Date :</p> 
           <input
+          className="input-field"
             type="date"
             value={date}
             onChange={(e) => setDate(e.target.value)}
           />
-        </label>
+        </label> <br/>
+
         <label>
-          Mode of Transport:
+        <p class="para-before-inputfield">Mode of Transport:</p>   
+
           <input
+          className="input-field"
             type="text"
             value={transport}
             onChange={(e) => setTransport(e.target.value)}
           />
-        </label>
+        </label> <br/>
+
         <label>
-          Expense:
+        <p class="para-before-inputfield">Expenses:</p>   
           <input
+            className="input-field"
             type="text"
             value={expense}
             onChange={(e) => setExpense(e.target.value)}
           />
-        </label>
+        </label><br/>
+
         <label>
-          People:
+        <p class="para-before-inputfield">People :</p>  
+
           <input
+          className="input-field"
             type="text"
             value={people}
             onChange={(e) => setPeople(e.target.value)}
           />
-        </label>
-        <button onClick={handleCreateTrip}>Create Trip</button>
-        <button onClick={onRequestClose}>Cancel</button>
+        </label> <br/>
+
+        <button className="create-trip-btn" onClick={handleCreateTrip}>Create Trip</button> <br/>
+        <button className="cancel-btn" onClick={onRequestClose}>Cancel</button> <br/>
+      
+        </div> 
+
       </form>
+
     </Modal>
   );
 };
