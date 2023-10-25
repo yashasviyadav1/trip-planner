@@ -1,4 +1,3 @@
-//tripmodal.js
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 
@@ -6,9 +5,12 @@ Modal.setAppElement('#root');
 
 const TripModal = ({ isOpen, onRequestClose, onCreateTrip }) => {
   const [destination, setDestination] = useState('');
+  
   const [origin, setOrigin] = useState('');
   const [date, setDate] = useState('');
   const [transport, setTransport] = useState('');
+  
+  
 
   const handleCreateTrip = () => {
     
