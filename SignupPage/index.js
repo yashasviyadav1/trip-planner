@@ -22,11 +22,14 @@ function signup(event){
     var password =  document.getElementById("password-field").value;
 
     if(firstname == "" || lastname == ""){
-        alert(`kindly fill both first and last name `)
+        alert(`kindly fill both first and last name `);
         return false;
     } 
 
-    
+    if(firstname.trim() === "" || lastname.trim() === ""){
+        alert(`enter a valid firstname and last name`);
+    }
+
     // var displayDiv = document.getElementById("display-div");
     // displayDiv.innerHTML = `<img class="fa-spin" src="./assets/images/loading-icon.png">`
 
