@@ -51,7 +51,7 @@ const TripCard = ({ trip, selectedTrips, onCheckboxChange, onEditClick, onSplitE
     <button onClick={() => onSplitExpense(trip)}>Split Expense</button>
     <button onClick={() => onDelete(trip)}>Delete</button>
     <button onClick={() => onFetchWeather(trip)}>Fetch Weather</button>
-    {trip.splitExpense && <p>Split Expense: ${trip.splitExpense.toFixed(2)}</p>}
+    {trip.splitExpense && <p>Split Expense: ₹{trip.splitExpense.toFixed(2)}</p>}
     {trip.weather && (
       <div>
         <p>Weather: {trip.weather.location.name}</p>
