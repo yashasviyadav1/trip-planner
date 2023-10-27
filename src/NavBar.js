@@ -22,6 +22,7 @@ function NavBar() {
           <li>
           <Link className="navbar-links" to='/completed-trips'>Completed Trips</Link>
           </li>
+          
         </ul>
       </div>
     </nav>
