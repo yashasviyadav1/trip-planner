@@ -4,5 +4,5 @@
 
 [[redirects]]
   from = "/*"
-  to = "/firstpage/main.html" # Adjust the path to your index.html
+  to = "/public/main.html" # Adjust the path to your index.html
   status = 200
