@@ -1,0 +1,8 @@
+[build]
+  command = "npm run build" # Adjust this command based on your build process
+  publish = "build"        # The directory where the built React app is located
+
+[[redirects]]
+  from = "/*"
+  to = "/firstpageete/main.html" # Adjust the path to your index.html
+  status = 200
